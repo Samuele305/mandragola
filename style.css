@@ -1,0 +1,347 @@
+/* Reset base e stili generali */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Scegli un font più carino, tipo 'Open Sans', 'Lato', 'Roboto' */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9; /* Un bianco sporco per lo sfondo generale */
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden; /* Per contenere i float, se usati */
+    padding: 0 20px;
+}
+
+/* Header e Navigazione */
+header {
+    background: #2E7D32; /* Verde scuro per Mandragola */
+    color: #fff;
+    padding: 1rem 0;
+    border-bottom: #1B5E20 3px solid; /* Bordo più scuro */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+header #logo {
+    height: 50px; /* Adatta alle dimensioni del tuo logo */
+    margin-right: 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-family: 'Georgia', serif; /* Un font più "naturale" per il nome */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #A5D6A7; /* Verde chiaro per hover/active */
+    border-bottom: 2px solid #A5D6A7;
+}
+
+/* Hero Section (Solo per Homepage) */
+#hero {
+    background: url('../img/hero-bg.jpg') no-repeat center center/cover; /* Sostituisci con un'immagine di sfondo adatta */
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Per l'overlay */
+}
+#hero::before { /* Overlay per migliorare leggibilità testo */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay scuro semi-trasparente */
+    z-index: 1;
+}
+#hero .container {
+    position: relative; /* Per stare sopra l'overlay */
+    z-index: 2;
+}
+
+
+#hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #66BB6A; /* Verde medio per i bottoni */
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background: #4CAF50; /* Verde più intenso all'hover */
+    transform: translateY(-2px);
+}
+
+/* Contenuto principale */
+main {
+    padding: 40px 0;
+}
+.page-content { /* Per pagine diverse dalla home, per dare un po' di spazio dall'header */
+    padding-top: 30px; 
+}
+
+main h2 {
+    color: #2E7D32; /* Verde scuro per i titoli delle sezioni */
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2.2rem;
+}
+main h3 {
+    color: #4CAF50; /* Verde medio per sottotitoli */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+main section {
+    margin-bottom: 40px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+main section:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Stili specifici per la Home Page */
+#servizi-home .servizi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.servizio-card {
+    background: #E8F5E9; /* Verde molto chiaro per le card */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.servizio-card img {
+    max-width: 100%;
+    height: 200px; /* Altezza fissa per uniformità */
+    object-fit: cover; /* Per mantenere le proporzioni e riempire */
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.servizio-card h3 {
+    color: #1B5E20; /* Verde scurissimo per i titoli delle card */
+    margin-bottom: 10px;
+}
+
+#perche-sceglierci ul {
+    list-style: '🌿'; /* Emoji come bullet point, potrebbe non funzionare ovunque */
+    padding-left: 30px; /* Spazio per l'emoji */
+}
+#perche-sceglierci li {
+    margin-bottom: 10px;
+}
+
+
+/* Stili specifici per Chi Siamo */
+.about-us-image {
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+    float: right; /* Immagine a destra */
+    margin-left: 20px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+#missione-valori ul {
+    list-style: '✔️';
+    padding-left: 30px;
+}
+#missione-valori ul li {
+    margin-bottom: 8px;
+}
+
+/* Stili specifici per Contatti */
+.contatti-dettagli {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contatto-item {
+    background: #E8F5E9;
+    padding: 20px;
+    border-radius: 8px;
+}
+.contatto-item h3 {
+    color: #1B5E20;
+    margin-bottom: 10px;
+}
+.contatto-item p a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+.contatto-item p a:hover {
+    text-decoration: underline;
+}
+
+#modulo-contatto form div {
+    margin-bottom: 15px;
+}
+
+#modulo-contatto label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #3E2723; /* Un marrone terroso per le label */
+}
+
+#modulo-contatto input[type="text"],
+#modulo-contatto input[type="email"],
+#modulo-contatto textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+#modulo-contatto textarea {
+    resize: vertical; /* Permette solo il resize verticale */
+}
+
+#modulo-contatto button[type="submit"] {
+    margin-top: 10px;
+}
+
+#form-response {
+    font-weight: bold;
+}
+.success-message {
+    color: green;
+}
+.error-message {
+    color: red;
+}
+
+.map-placeholder iframe { /* Stile per l'iframe della mappa */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+footer a {
+    color: #A5D6A7; /* Verde chiaro per i link nel footer */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    header nav ul {
+        margin-top: 15px;
+    }
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    #hero h2 {
+        font-size: 2.2rem;
+    }
+    #hero p {
+        font-size: 1rem;
+    }
+    .about-us-image {
+        float: none; /* Rimuovi float su schermi piccoli */
+        display: block; /* Centra l'immagine */
+        margin: 0 auto 20px auto;
+        max-width: 80%;
+    }
+    .servizi-grid, .contatti-dettagli {
+        grid-template-columns: 1fr; /* Stacka le card su schermi piccoli */
+    }
+}

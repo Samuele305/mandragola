@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti - Mandragola</title>
+    <link rel="stylesheet" href="assest/css/style.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo-link">
+                <img src="assest/img/logo-mandragola.png" alt="Logo Mandragola" id="logo">
+                <h1>Mandragola</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                    <li><a href="contatti.html" class="active">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page-content">
+        <section id="informazioni-contatto">
+            <h2>Contattaci</h2>
+            <p>Siamo pronti ad ascoltare le tue idee e a trasformarle in realtà. Non esitare a contattarci per un sopralluogo gratuito o per qualsiasi informazione.</p>
+            
+            <div class="contatti-dettagli">
+                <div class="contatto-item">
+                    <h3>Indirizzo</h3>
+                    <p>Via dei Girasoli, 123</p>
+                    <p>00100, Città Verde (RM)</p>
+                    <p>Italia</p>
+                </div>
+                <div class="contatto-item">
+                    <h3>Telefono</h3>
+                    <p><a href="tel:+390123456789">+39 012 3456789</a></p>
+                    <h3>Email</h3>
+                    <p><a href="mailto:info@mandragola.it">info@mandragola.it</a></p>
+                </div>
+                <div class="contatto-item">
+                    <h3>Orari di Apertura (Ufficio)</h3>
+                    <p>Lunedì - Venerdì: 9:00 - 18:00</p>
+                    <p>Sabato: 9:00 - 13:00 (su appuntamento)</p>
+                    <p>Domenica: Chiuso</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="modulo-contatto">
+            <h2>Scrivici un Messaggio</h2>
+            <form id="contactForm">
+                <div>
+                    <label for="name">Nome e Cognome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="subject">Oggetto:</label>
+                    <input type="text" id="subject" name="subject">
+                </div>
+                <div>
+                    <label for="message">Messaggio:</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="cta-button">Invia Messaggio</button>
+            </form>
+            <div id="form-response" style="margin-top: 15px;"></div>
+        </section>
+
+        <section id="mappa">
+            <h2>Dove Trovarci</h2>
+            <!-- Sostituisci con il codice embed di Google Maps o un'immagine della mappa -->
+            <div class="map-placeholder">
+                <p>Qui andrà la mappa incorporata di Google Maps.</p>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.0000000000005!2d12.49223091535544!3d41.89021017922143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f61b6532cf37b%3A0x1621808557177890!2sColosseo!5e0!3m2!1sit!2sit!4v1678886655321!5m2!1sit!2sit" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <!-- Esempio: Colosseo, sostituisci con il tuo indirizzo reale -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© <span id="currentYear"></span> Mandragola S.r.l.s. - P.IVA 12345678900 - Tutti i diritti riservati.</p>
+            <p>Seguici su: <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
+        </div>
+    </footer>
+
+    <script src="assest/js/script.js"></script>
+</body>
+</html>
